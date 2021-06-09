@@ -7,7 +7,16 @@ let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_JOB_LIST_KEY)) || [
     id: 1,
     name: 'MyList',
     active: true,
-    jobtasks: [],
+    jobtasks: [
+      {
+        id: 1,
+        title: 'New task Title',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptatem ipsa ut sit nesciunt quisquam culpa, consequatur error.',
+        weigth: 'normal',
+        due: '',
+        completed: false,
+      },
+    ],
   },
 ];
 
