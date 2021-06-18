@@ -1,6 +1,7 @@
 /* eslint-disable no-restricted-syntax */
 class TaskLayout {
-  constructor(tasks) {
+  constructor(job, tasks) {
+    this.job = job;
     this.tasks = tasks;
   }
 
@@ -15,7 +16,7 @@ class TaskLayout {
     const jobListName = document.createElement('div');
     jobListName.classList.add('Box-header', 'Box-header--blue');
     jobListName.innerHTML = `
-    <h3 class="Box-title">MyList<span class="Counter Counter--gray-dark ml-2">1</span></h3>
+    <h3 class="Box-title">${this.job}<span class="Counter Counter--gray-dark ml-2">${this.taskCount()}</span></h3>
     `;
     taskBox.append(jobListName);
 
@@ -47,7 +48,8 @@ class TaskLayout {
               </button>
             </div>
           </div>
-        </div><button class="btn btn-sm" data-status-button="">${item.status ? 'In progress ...' : 'Done'}</button>
+        </div>
+        <button class="btn btn-sm" data-status-button>${item.status ? 'In progress ...' : 'Done'}</button>
       `;
       taskBox.append(jobTaskItem);
     }

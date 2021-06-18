@@ -18,7 +18,7 @@ class JobList {
   render() {
     const jobLayout = new JobsLayout(this.jobs);
     jobLayout.render();
-    const taskLayout = new TaskLayout(this.jobs[0].tasks);
+    const taskLayout = new TaskLayout(this.jobs[0].title, this.jobs[0].tasks);
     taskLayout.render();
   }
 }
