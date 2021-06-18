@@ -1,8 +1,8 @@
 {
-  "name": "WebPackTemplate",
+  "name": "TestingTodoList",
   "version": "1.0.0",
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "style": "npx stylelint **/*.{css,scss} --fix",
     "lint": "npx eslint . --fix",
